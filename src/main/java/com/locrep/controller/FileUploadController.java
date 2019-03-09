@@ -3,6 +3,7 @@ package com.locrep.controller;
 import java.io.IOException;
 import java.util.stream.Collectors;
 
+import com.locrep.maven.MavenResolver;
 import com.locrep.storage.StorageFileNotFoundException;
 import com.locrep.storage.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,13 +35,31 @@ public class FileUploadController {
 
     @GetMapping("/")
     public String listUploadedFiles(Model model) throws IOException {
-
         model.addAttribute("files", storageService.loadAll().map(
                 path -> MvcUriComponentsBuilder.fromMethodName(FileUploadController.class,
                         "serveFile", path.getFileName().toString()).build().toString())
                 .collect(Collectors.toList()));
 
         return "uploadForm";
+    }
+
+    @GetMapping("/getArtifactsXml")
+    @ResponseBody
+    public String listArtifacts() {
+        String sonuc = "bos";
+        try {
+            MavenResolver rsv = new MavenResolver();
+            sonuc = rsv.getArtifactsXml();
+            System.out.println("test");
+        } catch (Exception e) {
+            //TODO: handle exception
+        }
+        // model.addAttribute("files", storageService.loadAll().map(
+        //         path -> MvcUriComponentsBuilder.fromMethodName(FileUploadController.class,
+        //                 "serveFile", path.getFileName().toString()).build().toString())
+        //         .collect(Collectors.toList()));
+
+        return sonuc;
     }
 
     @GetMapping("/files/{filename:.+}")
