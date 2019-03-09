@@ -44,4 +44,12 @@ public class FileController {
         System.out.println("ID is ");
         return "Get ID from query string of URL with value element";
     }
+
+    @ResponseBody
+   @RequestMapping(value = "/maven2/{groupId}/{artifactId}/{version}")
+   public String getId(@PathVariable("groupId") String groupId, @PathVariable("artifactId") String artifactId,
+           @PathVariable("version") String version) {
+
+       return groupId+"."+artifactId+"."+version;
+   }
 }
