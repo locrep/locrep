@@ -1,5 +1,5 @@
 package com.locrep.maven.controller;
 
-public class test {
+public class Murat_test {
 
 }
