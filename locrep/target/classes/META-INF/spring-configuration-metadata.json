@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "locrep",
+      "type": "com.locrep.configuration.LocrepConfiguration",
+      "sourceType": "com.locrep.configuration.LocrepConfiguration"
+    }
+  ],
+  "properties": [
+    {
+      "name": "locrep.verbose",
+      "type": "java.lang.Short",
+      "sourceType": "com.locrep.configuration.LocrepConfiguration"
+    }
+  ],
+  "hints": []
+}
