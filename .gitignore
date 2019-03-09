@@ -1,0 +1,15 @@
+target/locrep-0.0.1-SNAPSHOT.jar
+target/classes/com/locrep/storage/StorageFileNotFoundException.class
+target/classes/com/locrep/storage/FileSystemStorageService.class
+target/classes/com/locrep/controller/FileUploadController.class
+target/classes/application.properties
+target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+target/classes/com/locrep/storage/StorageProperties.class
+target/classes/com/locrep/Application.class
+target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+target/maven-archiver/pom.properties
+target/classes/com/locrep/storage/StorageService.class
+target/classes/com/locrep/maven/MavenResolver.class
+target/locrep-0.0.1-SNAPSHOT.jar.original
+target/classes/templates/uploadForm.html
+target/classes/com/locrep/storage/StorageException.class
