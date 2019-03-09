@@ -52,6 +52,6 @@ public class FileController {
     public String getId(@PathVariable("groupId") String groupId, @PathVariable("artifactId") String artifactId,
             @PathVariable("version") String version) {
 
-        return groupId + "." + artifactId + " ." + version;
+        return groupId + "." + artifactId + "." + version;
     }
 }
