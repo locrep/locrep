@@ -1,1 +1,11 @@
+META-INF\spring-configuration-metadata.json
+com\locrep\storage\FileSystemStorageService.class
 com\locrep\Application.class
+com\locrep\storage\StorageService.class
+com\locrep\maven\MavenResolver.class
+com\locrep\maven\ResolverInterface.class
+com\locrep\storage\StorageException.class
+com\locrep\controller\FileUploadController.class
+com\locrep\storage\StorageFileNotFoundException.class
+com\locrep\maven\Artifact.class
+com\locrep\storage\StorageProperties.class
