@@ -9,9 +9,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.HandlerMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import java.io.IOException;
+
+import javax.servlet.http.HttpServletRequest;
 
 @RestController
 @RequestMapping("/")
@@ -53,5 +56,11 @@ public class FileController {
             @PathVariable("version") String version) {
 
         return groupId + "." + artifactId + "." + version;
+    }
+    
+    @RequestMapping("/maven2/**")
+    public void foo(HttpServletRequest request) {
+        String restOfTheUrl = (String) request.getAttribute(HandlerMapping.PATH_WITHIN_HANDLER_MAPPING_ATTRIBUTE);
+        System.out.println("************************"+restOfTheUrl);
     }
 }
