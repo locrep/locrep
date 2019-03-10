@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PathVariable;
 import java.util.*;
 
-
 @RestController
 @RequestMapping("/")
 public class FileController {
