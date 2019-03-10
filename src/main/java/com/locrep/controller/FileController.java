@@ -60,9 +60,6 @@ public class FileController {
     @RequestMapping(value = "/maven2/**/{artifactId}/{version}/{artifactVersion}")
     public String getPath(HttpServletRequest request, @PathVariable("artifactId") String artifactId,
             @PathVariable("version") String version,@PathVariable("artifactVersion") String artifactVersion) {
-
-       
-
         return request.getRequestURI();
     }
 }
