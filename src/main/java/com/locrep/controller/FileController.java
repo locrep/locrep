@@ -4,6 +4,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.StreamUtils;
+import javax.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -41,17 +42,27 @@ public class FileController {
     // .body(bytes);
     // }
 
-    @RequestMapping(value = "/id")
-    String getIdByValue() {
-        System.out.println("ID is ");
-        return "Get ID from query string of URL with value element";
-    }
+    // @RequestMapping(value = "/id")
+    // String getIdByValue() {
+    //     System.out.println("ID is ");
+    //     return "Get ID from query string of URL with value element";
+    // }
+
+    // @ResponseBody
+    // @RequestMapping(value = "/maven2/{groupId}/{artifactId}/{version}")
+    // public String getId(@PathVariable("groupId") String groupId, @PathVariable("artifactId") String artifactId,
+    //         @PathVariable("version") String version) {
+
+    //     return groupId + "." + artifactId + " ." + version;
+    // }
 
     @ResponseBody
-    @RequestMapping(value = "/maven2/{groupId}/{artifactId}/{version}")
-    public String getId(@PathVariable("groupId") String groupId, @PathVariable("artifactId") String artifactId,
-            @PathVariable("version") String version) {
+    @RequestMapping(value = "/maven2/**/{artifactId}/{version}/{artifactVersion}")
+    public String getPath(HttpServletRequest request, @PathVariable("artifactId") String artifactId,
+            @PathVariable("version") String version,@PathVariable("artifactVersion") String artifactVersion) {
 
-        return groupId + "." + artifactId + " ." + version;
+       
+
+        return request.getRequestURI();
     }
 }
