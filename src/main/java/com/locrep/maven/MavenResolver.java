@@ -26,7 +26,7 @@ public class MavenResolver
 
     private static String baseUrl = "https://repo.maven.apache.org";
 
-    private static String filePath = "./mavenArtifacts";
+    private static String filePath = "./mavenArtifacts/";
 
     public void IterateDependencies(Artifact artif)
     {
