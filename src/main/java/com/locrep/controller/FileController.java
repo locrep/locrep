@@ -11,6 +11,7 @@ import java.util.*;
 @RequestMapping("/")
 public class FileController {
 
+    
     @ResponseBody
     @RequestMapping(value = "/maven2/**/{artifactId}/{version}/{artifactVersion}")
     public ArrayList<String> getPath(HttpServletRequest request, @PathVariable("artifactId") String artifactId,
