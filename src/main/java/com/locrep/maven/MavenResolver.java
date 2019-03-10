@@ -64,6 +64,27 @@ public class MavenResolver
 
     }
 
+    public void fetchFile(Artifact artif, String reqfile)
+    {
+        try {
+            new File(filePath + "/maven2/" + artif.getGroupIdPath() + "/" + artif.getArtifactId() + "/" + artif.getVersion() + "/").mkdirs();
+            File[] files = new File(filePath + "/maven2/" + artif.getGroupIdPath() + "/" + artif.getArtifactId() + "/" + artif.getVersion()).listFiles();
+            //If this pathname does not denote a directory, then listFiles() returns null. 
+            for (File file : files) {
+                if (file.isFile()) {
+                    if(file.getName().equals(reqfile))
+                    {
+                        return;
+                    }
+                }
+            }
+            String relurl = "/maven2/" + artif.getGroupIdPath() + "/" + artif.getArtifactId() + "/" + artif.getVersion() + "/" + reqfile;
+            Files.copy(new URL(baseUrl + relurl).openStream(), Paths.get(filePath + "/maven2/" + artif.getGroupIdPath() + "/" + artif.getArtifactId() + "/" + artif.getVersion() + "/" + reqfile));
+        } catch (Exception e) {
+            //TODO: handle exception
+        }
+    }
+
     public void fetchFiles(Artifact artif)
     {
         try {
@@ -73,8 +94,17 @@ public class MavenResolver
                 if(link.attr("href").length() > 3)
                 {
                     try {
-                        System.out.println(link.attr("href"));
-                        new File(filePath + "/maven2/" + artif.getGroupIdPath() + "/" + artif.getArtifactId() + "/" + artif.getVersion() + "/").mkdirs();
+                                                new File(filePath + "/maven2/" + artif.getGroupIdPath() + "/" + artif.getArtifactId() + "/" + artif.getVersion() + "/").mkdirs();
+                        File[] files = new File(filePath + "/maven2/" + artif.getGroupIdPath() + "/" + artif.getArtifactId() + "/" + artif.getVersion()).listFiles();
+                        //If this pathname does not denote a directory, then listFiles() returns null. 
+                        for (File file : files) {
+                            if (file.isFile()) {
+                                if(file.getName().equals(link.attr("href")))
+                                {
+                                    return;
+                                }
+                            }
+                        }
                         Files.copy(new URL(link.attr("abs:href")).openStream(), Paths.get(filePath + "/maven2/" + artif.getGroupIdPath() + "/" + artif.getArtifactId() + "/" + artif.getVersion() + "/" + link.attr("href")));
                     } catch (Exception e) {
                         //TODO: handle exception

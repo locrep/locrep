@@ -71,7 +71,7 @@ public class FileUploadController {
 
                 MavenResolver mrsv = new MavenResolver();
 
-                mrsv.fetchFiles(artif);
+                mrsv.fetchFile(artif, artifactVersion);
 
                 Resource file = storageService.loadAsResource("C:/Users/Berkay/Desktop/maven2/" + artif.getGroupIdPath() + "/" + artif.getArtifactId() + "/" + artif.getVersion() + "/" + artifactVersion);
                 return ResponseEntity.ok().header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + file.getFilename() + "\"").body(file);
