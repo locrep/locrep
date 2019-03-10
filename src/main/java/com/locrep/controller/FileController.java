@@ -24,7 +24,6 @@ public class FileController {
         mvn = mvn.substring(0, mvn.length() - 1);
 
         String groupId = mvn.replace("/", ".");
-
         ArrayList<String> dependencyList = new ArrayList<String>();
         dependencyList.add(groupId);
         dependencyList.add(artifactId);
