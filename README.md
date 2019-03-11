@@ -6,7 +6,6 @@
 
 **LocRep test Agile and DevOps WebSite** (https://dev.azure.com/LocRep/)
 
-> Before starting to publish, you must link an account in the **Publish** sub-menu.
 
 
 ## SmartyPaenter code herents
@@ -24,18 +23,14 @@ SmartyPants converts ASCII punctuation characters into "smart" typographic punct
 
 ## UML diagrams
 
-as
 
 ```mermaid
 sequenceDiagram
-Virtual Repo->> Local Repo : contains more than one local repo 
-Bob-->>John: How about you John?
-Bob--x Alice: I am good thanks!
-Bob-x John: I am good thanks!
-Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
+Vecihi Hurkus -x Cahit Arf:Pack-0.0.1-SNAPSHOT.jar
+Note right of Cahit Arf: Release Stage
 
-Bob-->Alice: Checking with John...
-Alice->John: Yes... John, how are you?
+Vecihi Hurkus-->Cahit Arf: Dev Stage.
+Locrep -x Nichola Tesla : Pack-1.0.1.jar
 ```
 
 And this will produce a flow chart:
