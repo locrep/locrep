@@ -1,8 +1,3 @@
-# LocRep
-Opensource Artifact Management Platform for DevOps
-
-
-
 # LocRep OpenSource Artifact Management Project for DevOps
 
 **LocRep official website** (http://locrep.com/) 
@@ -14,7 +9,7 @@ Opensource Artifact Management Platform for DevOps
 > Before starting to publish, you must link an account in the **Publish** sub-menu.
 
 
-## SmartyPants
+## SmartyPaenter code herents
 
 SmartyPants converts ASCII punctuation characters into "smart" typographic punctuation HTML entities. For example:
 
@@ -29,7 +24,7 @@ SmartyPants converts ASCII punctuation characters into "smart" typographic punct
 
 ## UML diagrams
 
-
+as
 
 ```mermaid
 sequenceDiagram
@@ -64,3 +59,4 @@ C --> D
 
 
 ```
+
