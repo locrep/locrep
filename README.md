@@ -1,6 +1,4 @@
 
-Murat buraya yazabilirsin
-
 # LocRep OpenSource Artifact Management Project for DevOps
 
 **LocRep official website** (http://locrep.com/) 
