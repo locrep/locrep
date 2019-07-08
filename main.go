@@ -5,7 +5,7 @@ import (
 	"log"
 	"strings"
 
-	"github.com/LocRep/LocRep/tree/master/maven"
+	"github.com/LocRep/LocRep/tree/master/maven/maven.go"
 	"github.com/gin-gonic/gin"
 )
 
