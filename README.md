@@ -24,7 +24,6 @@ SmartyPants converts ASCII punctuation characters into "smart" typographic punct
 
 ## UML diagrams
 
-
 ```mermaid
 sequenceDiagram
 Vecihi Hurkus -x Cahit Arf:Pack-0.0.1-SNAPSHOT.jar
@@ -33,9 +32,7 @@ Note right of Cahit Arf: Release Stage
 Vecihi Hurkus-->Cahit Arf: Dev Stage.
 Locrep -x Nichola Tesla : Pack-1.0.1.jar
 ```
-
 And this will produce a flow chart:
-
 ```mermaid
 graph LR
 
@@ -45,14 +42,6 @@ F5 --> A
 A --> C(Local Repositories)
 B --> D{Proxy Server}
 C --> D
-
-
-
-
-
 ```
-
-
-
 ```
 
